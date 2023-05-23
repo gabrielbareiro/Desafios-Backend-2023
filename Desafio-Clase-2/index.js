@@ -23,8 +23,8 @@ class ProductManager {
             && product.code > 0
             && product.stock > 0
         ) {
-            product.id = this.idNumerico()
             if ((ProductManager.products.some(num => num.code == product.code)) !== true) {
+                product.id = this.idNumerico()
                 ProductManager.products.push(product)
                 console.log(`producto agragado ${product.title}, su id es:"${product.id}"`);
                 console.log(`total de productos: ${ProductManager.products.length}`);
