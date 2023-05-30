@@ -1,0 +1,11 @@
+[
+  {
+    "title": "banana",
+    "description": "fruta",
+    "price": 550,
+    "thumbnail": "https://www.cucinare.tv/wp-content/uploads/2020/08/Bananas1.jpg",
+    "code": 1787,
+    "stock": 555,
+    "id": 1
+  }
+]
