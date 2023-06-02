@@ -80,7 +80,6 @@ class ProductManager {
                 await fs.promises.writeFile(this.path,
                     JSON.stringify(dataProdParse, null, 2))
                 console.log('Actualizado con exito');
-                return product;
             } else {
                 console.log(`No existe el producto con el id ${id}`);
                 return null
