@@ -16,6 +16,7 @@ export default class ProductManager {
         product.title !== "" &&
         product.description !== "" &&
         product.price > 0 &&
+        product.status === true &&
         product.thumbnail !== "" &&
         product.stock >= 0
       ) {
