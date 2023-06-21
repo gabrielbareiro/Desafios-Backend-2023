@@ -1,0 +1,49 @@
+<div class="container">
+    {{#if product}}
+    <h3>Producto Seleccionado:</h3>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="card ms-2" style="max-width: 400px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{product.thumbnail}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.title}}</h5>
+                            <p class="card-text">{{product.description}}</p>
+                            <p class="card-text"><small class="text-body-secondary">Price: ${{product.price}}</small>
+                            </p>
+                            <p class="card-text"><small class="text-body-secondary">Stock: {{product.stock}}</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <h3>Productos disponibles:</h3>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {{#each products}}
+            <div class="card ms-2" style="max-width: 400px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{this.thumbnail}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.title}}</h5>
+                            <p class="card-text">{{this.description}}</p>
+                            <p class="card-text"><small class="text-body-secondary">Price: ${{this.price}}</small></p>
+                            <p class="card-text"><small class="text-body-secondary">Stock: {{this.stock}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+</div>
