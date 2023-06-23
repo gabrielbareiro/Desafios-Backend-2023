@@ -11,9 +11,9 @@ router
             let { limit } = req.query;
             if (limit) {
                 products.length = limit;
-                res.render('home',{products});
+                res.render({products});
             } else {
-                res.render('home',{products});
+                res.render({products});
             }
         } catch (error) {
             res.status(400).json({success: false, error: 'Error al buscar los productos'});
@@ -23,7 +23,7 @@ router
     .get ('/:pid', async (req, res) => {
         try {
             const product = await productos.getProductById(parseInt(req.params.pid));
-            res.render('home',{product});
+            res.render({product});
         } catch (error) {
             res.status(404).json({success: false, error: `El producto con el id: ${req.params.pid} no existe!`});
         }

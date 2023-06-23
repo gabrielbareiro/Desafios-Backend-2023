@@ -1,57 +1,38 @@
-<div class="container text-center my-5">trabajo con socket</div>
-<div class="container row mx-3">
+<div class="container  my-4">
+  <h1 class="h2 mb-5 text-center">trabajo con socket</h1>
+  <div class="row mx-1">
     <div class="col-3 border border-secondary-subtle">
-        <form onsubmit="return addProduct(this)">
-  <div class="mb">
-    <label for="" class="form-label">Titulo del producto</label>
-    <input type="text" class="form-control" id="title">
-  </div>
-  <div class="mb">
-    <label for="" class="form-label">Descripcion del producto</label>
-    <input type="text" class="form-control" id="description">
-  </div>
-    <div class="mb">
-    <label for="" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="price">
-  </div>
-    <div class="mb">
-    <label for="" class="form-label">link a la imagen</label>
-    <input type="text" class="form-control" id="thumbnail">
-  </div>
-    <div class="mb">
-    <label for="" class="form-label">Codigo de porducto</label>
-    <input type="text" class="form-control" id="code">
-  </div>
-    <div class="mb">
-    <label for="" class="form-label">Unidades a agregar</label>
-    <input type="text" class="form-control" id="stock">
-  </div>
-  <button type="submit" class="btn btn-primary">Cargar</button>
-</form>
+      <form onsubmit="return addProduct(this)" id="form">
+        <div class="mb">
+          <label for="" class="form-label">Titulo del producto</label>
+          <input type="text" class="form-control" id="title">
+        </div>
+        <div class="mb">
+          <label for="" class="form-label">Descripcion del producto</label>
+          <input type="text" class="form-control" id="description">
+        </div>
+        <div class="mb">
+          <label for="" class="form-label">Precio</label>
+          <input type="text" class="form-control" id="price">
+        </div>
+        <div class="mb">
+          <label for="" class="form-label">link a la imagen</label>
+          <input type="text" class="form-control" id="thumbnail">
+        </div>
+        <div class="mb">
+          <label for="" class="form-label">Codigo de porducto</label>
+          <input type="text" class="form-control" id="code">
+        </div>
+        <div class="mb">
+          <label for="" class="form-label">Unidades a agregar</label>
+          <input type="text" class="form-control" id="stock">
+        </div>
+        <button type="submit" class="btn btn-primary">Cargar</button>
+      </form>
     </div>
     <div class="col-8 border border-secondary-subtle mx-3">
-        <h3 class="text-center">Productos Disponibles</h3>
-        <div class="">
-            <div class="row">
-            {{#each products}}
-            <div class="card m-1 col-6" style="max-width: 400px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{this.thumbnail}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{this.title}}</h5>
-                            <p class="card-text">{{this.description}}</p>
-                            <p class="card-text"><small class="text-body-secondary">Price: ${{this.price}}</small></p>
-                            <p class="card-text"><small class="text-body-secondary">Stock: {{this.stock}}</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
-        </div>
+      <h3 class="text-center h3 mb-5">Productos Disponibles</h3>
+      <div class="row" id="products"></div>
     </div>
+  </div>
 </div>
-
