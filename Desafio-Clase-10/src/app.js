@@ -7,7 +7,7 @@ import http from "http";
 //import cartRoutes from "./routes/cart.router.js";
 import viewsRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
-import sockets from "./Socket.js";
+import sockets from "./socket.js";
 
 const app = express(),
   PORT = process.env.PORT || 8080,
