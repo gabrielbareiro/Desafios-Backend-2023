@@ -3,8 +3,8 @@ import handlebars from "express-handlebars";
 import { Server as webSocketServer } from "socket.io";
 import http from "http";
 
-import productRoutes from "./routes/product.router.js";
-import cartRoutes from "./routes/cart.router.js";
+//import productRoutes from "./routes/product.router.js";
+//import cartRoutes from "./routes/cart.router.js";
 import viewsRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
 import Sockets from "./Socket.js";
