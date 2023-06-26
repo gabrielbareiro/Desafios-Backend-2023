@@ -7,7 +7,7 @@ import http from "http";
 //import cartRoutes from "./routes/cart.router.js";
 import viewsRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
-import Sockets from "./Socket.js";
+import sockets from "./Socket.js";
 
 const app = express(),
   PORT = process.env.PORT || 8080,
@@ -30,4 +30,4 @@ app
   // .use("/api/carts", cartRoutes)
   .use("/views", viewsRouter);
 
-Sockets(io);
+sockets(io);
